@@ -1,40 +1,27 @@
 package com.todolist.todolist.infrastructure.in.controllers;
 
-import com.todolist.todolist.domain.ports.out.repository.UsuariosRepository;
+import com.todolist.todolist.domain.service.UsuariosService;
 import com.todolist.todolist.infrastructure.dto.UsuarioRequest;
-import com.todolist.todolist.infrastructure.out.entity.Usuario;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuarios")
 public class UsuariosController {
 
-    private final UsuariosRepository repository;
+    private final UsuariosService service;
 
-    public UsuariosController(final UsuariosRepository repository) {
-        this.repository = repository;
+    public UsuariosController(final UsuariosService service) {
+        this.service = service;
     }
 
     @PostMapping
     public ResponseEntity<Object> adicionarUsuario(final @RequestBody UsuarioRequest request) {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        Usuario usuario = new Usuario();
-        usuario.setEmail(request.email());
-        usuario.setNome(request.nome());
-        usuario.setSenha(encoder.encode(request.senha()));
-
-        this.repository.save(usuario);
+        service.salvarUsuario(request);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
-    @GetMapping
-    public ResponseEntity<List<Usuario>> obterTodosUsuarios() {
-        return new ResponseEntity<>(this.repository.findAll(), HttpStatus.OK);
-    }
-
 }
