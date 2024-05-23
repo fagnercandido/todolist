@@ -1,7 +1,7 @@
 # TODO List
 
 ### Começando pelo começo...
-Seguem abaixos os requisitos minimos para rodar a aplicação:
+Seguem abaixo os requisitos minimos para rodar a aplicação:
 
 * Java 17
 * Maven v3+
