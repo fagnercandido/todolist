@@ -1,0 +1,14 @@
+com/todolist/todolist/infrastructure/out/entity/Tarefa.class
+com/todolist/todolist/domain/ports/out/repository/UsuariosRepository.class
+com/todolist/todolist/infrastructure/configuration/WebSecurityConfiguration.class
+com/todolist/todolist/infrastructure/in/controllers/TarefasController.class
+com/todolist/todolist/infrastructure/in/controllers/AuthController.class
+com/todolist/todolist/domain/exception/UsuarioJaExisteException.class
+com/todolist/todolist/infrastructure/out/entity/Status.class
+com/todolist/todolist/infrastructure/in/controllers/UsuariosController.class
+com/todolist/todolist/domain/exception/CustomHttpExceptionHandler.class
+com/todolist/todolist/domain/service/UserDetailsServiceImpl.class
+com/todolist/todolist/TodolistApplication.class
+com/todolist/todolist/infrastructure/out/entity/Usuario.class
+com/todolist/todolist/infrastructure/dto/UsuarioRequest.class
+com/todolist/todolist/domain/service/UsuariosService.class

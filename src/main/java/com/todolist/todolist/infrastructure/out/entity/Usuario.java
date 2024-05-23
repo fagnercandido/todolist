@@ -14,13 +14,15 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
+    private String permissao;
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Tarefa> tarefas;
 
-    public Usuario(String nome, String email, String senha) {
+    public Usuario(String nome, String email, String senha, String permissao) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.permissao = permissao;
     }
 
     public Usuario() {
@@ -64,5 +66,13 @@ public class Usuario {
 
     public void setTarefas(List<Tarefa> tarefas) {
         this.tarefas = tarefas;
+    }
+
+    public String getPermissao() {
+        return permissao;
+    }
+
+    public void setPermissao(String permissao) {
+        this.permissao = permissao;
     }
 }

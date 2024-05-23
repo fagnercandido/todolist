@@ -1,0 +1,14 @@
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/domain/ports/out/repository/UsuariosRepository.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/configuration/WebSecurityConfiguration.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/in/controllers/UsuariosController.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/TodolistApplication.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/out/entity/Tarefa.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/domain/exception/UsuarioJaExisteException.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/dto/UsuarioRequest.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/domain/exception/CustomHttpExceptionHandler.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/in/controllers/AuthController.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/in/controllers/TarefasController.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/out/entity/Usuario.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/infrastructure/out/entity/Status.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/domain/service/UsuariosService.java
+/Users/fagnercandido/Documents/development/sources/todolist/src/main/java/com/todolist/todolist/domain/service/UserDetailsServiceImpl.java
