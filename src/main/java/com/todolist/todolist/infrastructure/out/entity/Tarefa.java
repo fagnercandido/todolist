@@ -19,8 +19,17 @@ public class Tarefa {
     private Instant dataAtualiacao;
     @Enumerated(EnumType.STRING)
     private Status status;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Usuario usuario;
+
+    public Tarefa(String titulo, String descricao, Instant dataCriacao, Instant dataAtualiacao, Status status) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.dataCriacao = dataCriacao;
+        this.dataAtualiacao = dataAtualiacao;
+        this.status = status;
+    }
+
+    public Tarefa() {
+    }
 
     public Long getId() {
         return id;
@@ -68,13 +77,5 @@ public class Tarefa {
 
     public void setStatus(Status status) {
         this.status = status;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
     }
 }

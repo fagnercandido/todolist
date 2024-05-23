@@ -2,6 +2,7 @@ package com.todolist.todolist.infrastructure.in.controllers;
 
 import com.todolist.todolist.domain.service.UsuariosService;
 import com.todolist.todolist.infrastructure.dto.UsuarioRequest;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ public class UsuariosController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> adicionarUsuario(final @RequestBody UsuarioRequest request) {
+    public ResponseEntity<Object> adicionarUsuario(final @Valid @RequestBody UsuarioRequest request) {
         service.salvarUsuario(request);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
