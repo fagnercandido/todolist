@@ -17,6 +17,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+/**
+ * Classe de configuração para o Spring Security.
+ * Configura o contexto de segurança para a aplicação, incluindo regras de autenticação e autorização.
+ */
 public class WebSecurityConfiguration {
 
     @Autowired
@@ -26,6 +30,10 @@ public class WebSecurityConfiguration {
     private AuthEntryPointJwt unauthorizedHandler;
 
     @Bean
+    /**
+     * Bean para o filtro de autenticação JWT.
+     * @return AuthTokenFilter.
+     */
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
     }
@@ -62,6 +70,10 @@ public class WebSecurityConfiguration {
     }
 
     @Bean
+    /**
+     * Configura o codificador de senha.
+     * @return PasswordEncoder.
+     */
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }

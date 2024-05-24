@@ -15,11 +15,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
+/**
+ * Componente que implementa o ponto de entrada de autenticação.
+ * Este componente é responsável por lidar com exceções de autenticação e enviar uma resposta adequada.
+ */
 public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthEntryPointJwt.class);
 
     @Override
+    /**
+     * Método chamado quando ocorre uma exceção de autenticação.
+     * Este método envia uma resposta com status 401 (Não Autorizado) e detalhes da exceção no corpo da resposta.
+     *
+     * @param request A requisição HTTP.
+     * @param response A resposta HTTP.
+     * @param authException A exceção de autenticação.
+     * @throws IOException Se ocorrer um erro ao escrever para o corpo da resposta.
+     */
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)
             throws IOException {
         logger.error("Erro de Autorização: {}", authException.getMessage());

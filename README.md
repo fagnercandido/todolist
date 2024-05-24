@@ -84,3 +84,7 @@ curl -v --location --request PUT 'localhost:8080/tarefas/2' \                   
     "status" : "PENDENTE" 
 }'
 ```
+
+### Pontos de Melhoria
+* o logout não está invalidando o token corretamente, pois como é por cookies, isso depende da invalidação.
+* inicialmente foi cogitado usar o BasicAuth, entretanto, com os métodos deprecated foi usado do JWT, o acabou por acrescentar um pouco mais de complexidade.
