@@ -16,10 +16,10 @@ import java.security.Key;
 import java.time.Instant;
 import java.util.Date;
 
-@Component
 /**
  * Componente responsável pela geração, validação e manipulação de tokens JWT.
  */
+@Component
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
